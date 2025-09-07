@@ -242,6 +242,15 @@ h4 {
 .type.dragon {
   background: #7038f8;
 }
+.type.dark {
+  background: #705848;
+}
+.type.steel {
+  background: #b8b8d0;
+}
+.type.fairy {
+  background: #ee99ac;
+}
 
 .stats {
   display: grid;
@@ -712,4 +721,222 @@ h4 {
   color: #666;
   font-size: 14px;
   text-align: center;
+}
+
+.type-selector button {
+  padding: 10px 8px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+}
+
+.type-selector button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.evolution-pokemon {
+  min-width: 120px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.evolution-pokemon img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 8px;
+}
+
+.evolution-arrow {
+  font-size: 1.5rem;
+  color: #666;
+  flex-shrink: 0;
+}
+
+/* Scrollbar personalizada para evolution-chain */
+.evolution-chain::-webkit-scrollbar {
+  height: 6px;
+}
+
+.evolution-chain::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.evolution-chain::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+.evolution-chain {
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+@media (max-width: 768px) {
+  .pokemon-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .search-container {
+    flex-direction: column;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+  .container {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .pagination {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .pagination-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .page-numbers {
+    gap: 0.3rem;
+  }
+
+  .page-number {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Mejoras para pokemon-team en móviles */
+  .pokemon-team {
+    grid-template-columns: 1fr;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .pokemon-team img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .pokemon-team .stat-name {
+    min-width: 60px;
+    font-size: 0.8rem;
+  }
+
+  .pokemon-team .stat {
+    height: 30px;
+    gap: 8px;
+  }
+
+  .pokemon-team .stat-bar {
+    height: 6px;
+  }
+
+  .pokemon-team .stat-value {
+    min-width: 50px;
+    font-size: 0.7rem;
+  }
+
+  /* Mejoras para pokemon-image en móviles */
+  .pokemon-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .pokemon-image img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+
+  .pokemon-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .pokemon-id {
+    width: auto;
+    margin: 0 auto 10px;
+  }
+
+  /* Mejoras para type-selector en móviles */
+  .type-selector {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 8px;
+    padding: 15px;
+  }
+
+  .type-selector button {
+    padding: 8px 6px;
+    font-size: 0.8rem;
+  }
+
+  /* Mejoras para evolution-chain en móviles */
+  .evolution-chain {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .evolution-pokemon {
+    min-width: 100px;
+  }
+
+  .evolution-pokemon img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .evolution-pokemon h4 {
+    font-size: 0.9rem;
+  }
+
+  .evolution-pokemon p {
+    font-size: 0.8rem;
+  }
+
+  .evolution-arrow {
+    font-size: 1.2rem;
+  }
+}
+
+/* Media query adicional para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .type-selector {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(15, 1fr);
+    gap: 6px;
+    padding: 10px;
+  }
+
+  .type-selector button {
+    padding: 6px 4px;
+    font-size: 0.75rem;
+  }
+
+  .pokemon-team img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .evolution-pokemon {
+    min-width: 80px;
+  }
+
+  .evolution-pokemon img {
+    width: 50px;
+    height: 50px;
+  }
 }
