@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>PokéDex</title>
+    
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>PokéDex</h1>
+        <p class="subtitle">Primera generacion - (1 - 151)</p>
+      </header>
+    
+    <div class="menu-section">
+      <div class="search-container">
+        <input
+          type="text"
+          id="pokemonInput"
+          placeholder="Buscar Pokémon (nombre o ID)..."
+        />
+        <button id="btn-search">🔍 Buscar</button>
+      </div>
+      <div class="buttons-grid">
+      <button id="btn-get">🎲 Pokémon Aleatorio</button>
+      <button id="btn-team_list">✨ Mi equipo Pokemon</button>
+      <button id="btn-get_list">📋 Lista de Pokémon</button>
+      <button id="btn-search_type">🔍 Buscar por Tipo</button>
+      </div>
+    </div>
+    <div id="pokemon-data-container"></div>
+    <div id="pokemon-team-container"></div>
+    <div id="pokemon-list-container" class="pokemon-list-container"></div>
+    <div id="pokemon-type-list"></div>
+    <div id="evolutionData"></div>
+    <script src="./scripts/pokemon.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
